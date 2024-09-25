@@ -15,11 +15,19 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         navigateToCertificate()
+        navigateToRegisterStatus()
     }
 
     private fun navigateToCertificate() {
         binding.goCertificationBtn.setOnClickListener {
             val intent = Intent(this, CertificateActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun navigateToRegisterStatus() {
+        binding.goRegisterBtn.setOnClickListener {
+            val intent = Intent(this, RegisterStatusActivity::class.java)
             startActivity(intent)
         }
     }
