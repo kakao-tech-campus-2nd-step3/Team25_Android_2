@@ -1,7 +1,8 @@
-package com.example.team25_2
+package com.example.team25_2.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.team25_2.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
