@@ -1,5 +1,6 @@
 package com.example.team25_2.ui.register
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.team25_2.R
@@ -13,6 +14,13 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        navigateToCertificate()
     }
 
+    private fun navigateToCertificate() {
+        binding.goCertificationBtn.setOnClickListener {
+            val intent = Intent(this, CertificateActivity::class.java)
+            startActivity(intent)
+        }
+    }
 }
