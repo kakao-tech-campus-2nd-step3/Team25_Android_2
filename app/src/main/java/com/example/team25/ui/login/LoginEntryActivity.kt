@@ -1,15 +1,11 @@
-package com.example.team25_2.ui.login
+package com.example.team25.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.team25_2.R
-import com.example.team25_2.databinding.ActivityLoginEntryBinding
-import com.example.team25_2.ui.main.MainActivity
-import com.example.team25_2.ui.register.RegisterEntryActivity
+import com.example.team25.databinding.ActivityLoginEntryBinding
+import com.example.team25.ui.main.MainActivity
+import com.example.team25.ui.register.RegisterEntryActivity
 
 class LoginEntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginEntryBinding

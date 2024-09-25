@@ -1,13 +1,9 @@
-package com.example.team25_2.ui.register
+package com.example.team25.ui.register
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.team25_2.R
-import com.example.team25_2.databinding.ActivityRegisterEntryBinding
+import com.example.team25.databinding.ActivityRegisterEntryBinding
 
 class RegisterEntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterEntryBinding
@@ -26,5 +22,4 @@ class RegisterEntryActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 }

@@ -1,13 +1,12 @@
-package com.example.team25_2.ui.profile
+package com.example.team25.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.team25_2.R
-import com.example.team25_2.databinding.ActivityEditProfileBinding
+import com.example.team25.databinding.ActivityEditProfileBinding
 
 class EditProfileActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityEditProfileBinding
+    private lateinit var binding: ActivityEditProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
