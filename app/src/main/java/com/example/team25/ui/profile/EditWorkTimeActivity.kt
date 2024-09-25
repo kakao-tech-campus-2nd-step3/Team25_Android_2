@@ -1,12 +1,12 @@
-package com.example.team25_2.ui.register
+package com.example.team25.ui.profile
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.team25_2.R
+import com.example.team25.R
 
-class CertificateActivity : AppCompatActivity() {
+class EditWorkTimeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_certificate)
+        setContentView(R.layout.activity_edit_work_time)
     }
 }

@@ -1,10 +1,9 @@
-package com.example.team25_2.ui.register
+package com.example.team25.ui.register
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.team25_2.R
-import com.example.team25_2.databinding.ActivityRegisterBinding
+import com.example.team25.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
