@@ -1,0 +1,317 @@
+<resources>
+    <string name="app_name">매니저앱</string>
+    <string name="main_welcome">환영합니다 산지니님</string>
+    <string name="hospital_companion">병원동행</string>
+    <string name="need_hospital_companion">믿을 수 있는 병원 동행이 필요할 때</string>
+    <string name="go_reservation">예약하러 바로 가기</string>
+    <string name="real_time_companion_status">실시간 동행 현황</string>
+    <string name="see_all">모두 보기</string>
+    <string name="service_available_after_log_in">로그인 후 이용 가능한 서비스입니다.</string>
+    <string name="reservation_status">예약 현황</string>
+    <string name="service_description">전문 매니저와 함께해서\n믿을 수 있는 병원 동행 서비스</string>
+    <string name="application_name">앱이름</string>
+    <string name="input_information">환자분의 정보를 입력해주세요</string>
+    <string name="name">이름</string>
+    <string name="input_name_hint">이름 입력</string>
+    <string name="gender">성별</string>
+    <string name="man">남</string>
+    <string name="woman">여</string>
+    <string name="previous">이전</string>
+    <string name="next">다음</string>
+    <string name="select_relation">환자분과의 관계를 선택해주세요</string>
+    <string name="myself">본인</string>
+    <string name="phone_num">전화번호</string>
+    <string name="_010">010</string>
+    <string name="_0000">0000</string>
+    <string name="dash">-</string>
+    <string name="input_next_of_kin">보호자의 연락처를 입력해주세요</string>
+    <string name="notify_by_message">(동행 현황을 보호자분께도 문자로 알려드립니다.)</string>
+    <string name="input_birthday">환자분의 생년월일을 입력해주세요</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="_01">01</string>
+    <string name="_1970">1970</string>
+    <string name="all">전체</string>
+    <string name="manager">매니저</string>
+    <string name="check_reservation">예약 내용을 한번 더 확인해주세요</string>
+    <string name="patient">환자</string>
+    <string name="from">출발지</string>
+    <string name="to">도착지</string>
+    <string name="damdangManger">담당 매니저</string>
+    <string name="pay">결제하기</string>
+    <string name="pay_info">결제정보</string>
+    <string name="deposit">보증금</string>
+    <string name="won">원</string>
+    <string name="total_payment_amount">총 결제금액</string>
+    <string name="pay_credit_card">신용/체크카드 결제하기</string>
+    <string name="pay_toss">토스로 결제하기</string>
+    <string name="manager_list">매니저 리스트</string>
+    <string name="select_manager">담당 매니저를 선택해주세요.</string>
+    <string name="manager_info">매니저 정보</string>
+    <string name="introduction">한마디</string>
+    <string name="active_location">활동 지역</string>
+    <string name="active_time">활동 시간</string>
+    <string name="career_infor">경력</string>
+    <string name="reserve">예약 하기</string>
+    <string name="input_departures">출발지를 입력해주세요</string>
+    <string name="road_address">도로명 주소</string>
+    <string name="search_by_road_address">도로명 주소(지번 주소)로 검색</string>
+    <string name="detail_address">상세주소</string>
+    <string name="input_detail_address">상세한 주소를 작성해주세요</string>
+    <string name="choose_destination">도착 병원을 선택해주세요</string>
+    <string name="search_destination">도착 병원 검색</string>
+    <string name="input_query">검색어 입력(ex. 부산대, 세브란스)</string>
+    <string name="choose_date">이용일자를 선택해주세요</string>
+    <string name="choose_time">매니저 만남 시간을 선택해주세요</string>
+    <string name="same_day_reservation">당일 예약은 불가합니다</string>
+
+    <string-array name="relation_option">
+        <item>본인</item>
+        <item>자식</item>
+        <item>부모</item>
+        <item>친척</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="phone_num_option">
+        <item>010</item>
+        <item>011</item>
+        <item>016</item>
+        <item>017</item>
+        <item>019</item>
+        <item>02</item>
+        <item>031</item>
+        <item>032</item>
+        <item>033</item>
+        <item>041</item>
+        <item>042</item>
+        <item>043</item>
+        <item>044</item>
+        <item>051</item>
+        <item>052</item>
+        <item>053</item>
+        <item>054</item>
+        <item>061</item>
+        <item>062</item>
+        <item>063</item>
+        <item>064</item>
+    </string-array>
+
+    <string name="reservation_history">예약 내역</string>
+    <string name="reservation_cancel">예약 취소</string>
+    <string name="call_manager">매니저에게 연락하기</string>
+    <string name="write_review">리뷰 작성하기</string>
+    <string name="check_report">리포트 확인</string>
+    <string name="request_cancel">취소 요청하기</string>
+    <string name="reservation_cancle_description">예약 2시간 전 부터는 예약 취소가 불가합니다</string>
+    <string name="cancel_reason">취소 사유(필수)</string>
+    <string name="cancel_reason_detail">취소 상세</string>
+    <string name="cancel_reason_detail_description">구체적인 사유를 적어주세요</string>
+    <string name="select">선택</string>
+    <string name="deposit_refund_cancel">보증금 환불 및 취소</string>
+    <string name="writer">작성자</string>
+    <string name="writer_date">작성일자</string>
+    <string name="doctor_opinion_summary">의사 소견 요약</string>
+    <string name="medication_guidance">약 복용 방법</string>
+    <string name="meal_before">식전</string>
+    <string name="meal_after">식후</string>
+    <string name="min_30">30분</string>
+    <string name="hour">1시간</string>
+    <string name="morning">아침</string>
+    <string name="lunch">점심</string>
+    <string name="dinner">저녁</string>
+    <string name="nursing_care_worker">요양보호사</string>
+    <string name="x">X</string>
+    <string name="introduction_detail">친부모님처럼 따듯하게 모시겠습니다 ^^</string>
+    <string name="busan_namgu">부산광역시 남구</string>
+    <string name="_00_00_00_00">00:00 ~ 00:00</string>
+    <string name="sunday">일</string>
+    <string name="saturday">토</string>
+    <string name="friday">금</string>
+    <string name="thrusday">목</string>
+    <string name="wednesday">수</string>
+    <string name="tuesday">화</string>
+    <string name="monday">월</string>
+    <string name="choose">선택하기</string>
+    <string name="_50000">50000</string>
+    <string name="basic_fee">기본 이용료</string>
+    <string name="app_name_manager">매니저 앱</string>
+    <string name="summarize_doctor_comment">의사소견 요약</string>
+    <string name="report_check">리포트 확인</string>
+    <string name="hint_report">진료 내용을 상세히 작성해주세요\n(50자 이내)</string>
+    <string name="ways_take_medicine">약 복용 방법</string>
+    <string name="now">바로</string>
+    <string name="complete_write_report">리포트 작성 완료하기</string>
+    <string name="prefer_working_location">희망 근무 지역 선택해주세요</string>
+    <string name="seoul">서울특별시</string>
+    <string name="select_administrative_district">시/도 선택</string>
+    <string name="select_city">시/군/구 선택</string>
+    <string name="gangseogu">강서구</string>
+    <string name="edit">수정하기</string>
+    <string name="edit_work_time">예약 신청 받을 시간대를 선택해주세요</string>
+    <string name="select_day">요일 선택</string>
+    <string name="select_active_time">활동 시간 선택 </string>
+    <string name="_08_00">08:00</string>
+    <string name="_20_00">20:00</string>
+    <string name="set_work_time_location">근무 지역/시간대 설정하기</string>
+    <string-array name="administrative_district_option">
+        <item>서울특별시</item>
+        <item>부산광역시</item>
+        <item>대구광역시</item>
+        <item>인천광역시</item>
+        <item>광주광역시</item>
+        <item>대전광역시</item>
+        <item>울산광역시</item>
+        <item>경기도</item>
+        <item>강원도</item>
+        <item>충청북도</item>
+        <item>충청남도</item>
+        <item>전라북도</item>
+        <item>전라남도</item>
+        <item>경상북도</item>
+        <item>경상남도</item>
+        <item>제주특별자치도</item>
+        <item>세종특별자치도</item>
+    </string-array>
+    <string name="register_manager">매니저로 등록하기</string>
+    <string name="hello">반갑습니다</string>
+    <string name="kim_jisu">김지수</string>
+    <string name="manager_sir">매니저님</string>
+    <string name="manage">관리하기</string>
+    <string name="not_companion">현재 동행 중이 아닙니다.</string>
+    <string name="no_reservation">예약 내역이 없습니다.</string>
+    <string name="register_manager_02">매니저 등록하기</string>
+    <string name="apply_register">등록 신청하기</string>
+    <string name="upload_profile">프로필 이미지 업로드</string>
+    <string name="work_history">경력</string>
+    <string name="work_history_example">예)\n2020 ~ 2023 OO병원 근무\n2017 ~ 2019 XX병원 근무</string>
+    <string name="short_introduction">한마디 자기소개</string>
+    <string name="introduction_example">예)\n친부모님처럼 따뜻하게 모시겠습니다.</string>
+    <string name="certification">자격증</string>
+    <string name="go_certification">자격증명서 인증하기</string>
+    <string name="introduction_text">친부모님처럼 따뜻하게 모시겠습니다^^</string>
+    <string name="nothing">없음</string>
+    <string name="career_example">2012~2020 부산대학병원</string>
+    <string name="from_02">부터</string>
+    <string name="to_02">까지</string>
+    <string name="before_sleep">취침전</string>
+    <string name="everyday">매일</string>
+    <string name="times">회</string>
+    <string name="_1">1</string>
+    <string name="_0">0</string>
+    <string name="_00_00">00:00</string>
+    <string name="wave">~</string>
+    <string name="certificate">자격증명서 인증하기</string>
+    <string name="certificate_notice">인증까지 약 1 ~ 3일이 소요됩니다</string>
+    <string name="upload_certificate">인증사진 업로드</string>
+    <string name="upload_precaution">이미지 업로드 주의사항</string>
+    <string name="certificate_precaution_1">제한용량 : 5MB</string>
+    <string name="certificate_precaution_2">허용 파일 : PNG, JPG</string>
+    <string name="certificate_precaution_3">반드시 자격증 전체 화면이 보이도록 캡처해주세요</string>
+    <string name="certificate_precaution_4">특수 효과나 편집 사진은 업로드 불가 대상입니다</string>
+    <string name="register_status">등록 신청 현황</string>
+    <string name="reviewing">현재 심사 중입니다</string>
+    <string name="reviewing_notice">심사 과정에서 약 3 ~ 7일 소요됩니다</string>
+    <string name="input_manager_infor">매니저\n정보입력</string>
+    <string name="reviewing_02">심사 중</string>
+    <string name="register_complete">등록완료</string>
+    <string name="infor_notice">등록이 완료되면 카카오톡 및 메시지로 알려드립니다.</string>
+    <string-array name="reservation_cancel_reason_option">
+        <item>고객변심</item>
+        <item>재예약</item>
+        <item>원하는 매니저 없음</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="time">
+        <item>00:00</item>
+        <item>00:30</item>
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+        <item>24:00</item>
+        <item>24:30</item>
+    </string-array>
+
+    <string-array name="reservation_reject_option">
+        <item>예약 마감</item>
+        <item>환자 미응답</item>
+        <item>병원 미운영</item>
+        <item>기타</item>
+    </string-array>
+    <string name="complete_companion_task">동행업무를 완료하시겠습니까?</string>
+    <string name="prompt_write_report_info">리포트를 작성하여 진료 정보를\n알려주세요</string>
+    <string name="write_report">리포트 작성</string>
+    <string name="cancel">취소</string>
+    <string name="companion_start">동행시작</string>
+    <string name="companion_complete">동행완료</string>
+    <string name="complete_companion">동행 완료하기</string>
+    <string name="show_details">자세히 보기</string>
+    <string name="accept">수락하기</string>
+    <string name="refuse">거절하기</string>
+    <string name="reservation_apply">예약 신청</string>
+    <string name="reservation_reject">예약 거절</string>
+    <string name="reject_reservation">예약 거절하기</string>
+    <string name="reservation_information">예약 정보</string>
+    <string name="complete_history">완료 내역</string>
+    <string name="reject_reason">거절 사유(필수)</string>
+    <string name="reject_reason_details">거절 사유 상세</string>
+    <string name="input_specific_reason">구체적인 사유를 적어주세요</string>
+    <string name="service_start_time">이용 시작시간</string>
+    <string name="transportation">이용 시작시간</string>
+    <string name="request_details">요청사항</string>
+    <string name="user_information">이용자 정보</string>
+    <string name="birthday">생년월일</string>
+    <string name="payment_history">결제 내역</string>
+    <string name="payment_time">결제 시간</string>
+    <string name="payment_method">결제 수단</string>
+    <string name="cash_receipt">현금영수증</string>
+    <string name="companion_history">동행 내역</string>
+    <string name="status_patient_accompanying">환자 동행중</string>
+    <string name="input_companion_status">동행 상태를 입력해주세요</string>
+    <string name="input">입력</string>
+    <string name="output">출력</string>
+
+</resources>
