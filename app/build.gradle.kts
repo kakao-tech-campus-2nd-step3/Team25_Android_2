@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.team25_2"
+    namespace = "com.example.team25"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.team25_2"
+        applicationId = "com.example.team25"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -28,7 +28,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -43,7 +43,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
