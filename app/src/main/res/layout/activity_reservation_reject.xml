@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.status.ReservationRejectActivity">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reservation_reject_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reservation_reject"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_btn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reservation_information"
+        android:layout_width="300dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/light_gray_outline_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_btn">
+
+        <TextView
+            android:id="@+id/user_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="이용자 이름" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/patient"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/user_name_text_view"
+            app:layout_constraintStart_toEndOf="@id/user_name_text_view" />
+
+        <TextView
+            android:id="@+id/reservation_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/user_name_text_view"
+            app:layout_constraintTop_toBottomOf="@id/user_name_text_view"
+            tools:text="7월 14일 오후 8시" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/reservation_reject_reason_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/reject_reason"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/reservation_information"
+        app:layout_constraintTop_toBottomOf="@id/reservation_information" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reservation_reject_reason_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_weight="6"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
+        app:layout_constraintStart_toStartOf="@id/reservation_reject_reason_text_view"
+        app:layout_constraintTop_toBottomOf="@id/reservation_reject_reason_text_view">
+
+        <AutoCompleteTextView
+            android:id="@+id/reservation_reject_reason_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/select"
+            android:inputType="none"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/reservation_reject_reason_details_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/reject_reason_details"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/reservation_reject_reason_input"
+        app:layout_constraintTop_toBottomOf="@id/reservation_reject_reason_input" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/light_gray_input_box"
+        android:hint="@string/input_specific_reason"
+        android:padding="16dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/reservation_reject_reason_details_text_view"
+        app:layout_constraintTop_toBottomOf="@id/reservation_reject_reason_details_text_view" />
+
+    <TextView
+        android:id="@+id/reservation_reject_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_02"
+        android:gravity="center"
+        android:text="@string/reject_reservation"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
