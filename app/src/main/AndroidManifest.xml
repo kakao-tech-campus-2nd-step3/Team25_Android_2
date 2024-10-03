@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ui.ManagerApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Team25_2"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.status.PaymentHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationRejectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ReservationStatusActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.companion.LiveCompanionActivity"
             android:exported="false" />
