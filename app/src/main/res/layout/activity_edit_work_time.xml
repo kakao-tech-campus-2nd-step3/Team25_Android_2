@@ -40,10 +40,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/monday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/monday"
                 android:textColor="@color/blue"
@@ -53,6 +54,7 @@
                 android:id="@+id/monday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -111,10 +113,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tuesday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/tuesday"
                 android:textColor="@color/blue"
@@ -124,6 +127,7 @@
                 android:id="@+id/tuesday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -182,10 +186,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/wednesday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/wednesday"
                 android:textColor="@color/blue"
@@ -195,6 +200,7 @@
                 android:id="@+id/wednesday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -253,10 +259,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/thursday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/thrusday"
                 android:textColor="@color/blue"
@@ -266,6 +273,7 @@
                 android:id="@+id/thursday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -324,10 +332,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/friday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/friday"
                 android:textColor="@color/blue"
@@ -337,6 +346,7 @@
                 android:id="@+id/friday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -395,10 +405,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/saturday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/saturday"
                 android:textColor="@color/blue"
@@ -408,6 +419,7 @@
                 android:id="@+id/saturday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -466,10 +478,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/sunday_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/after_select_day_of_week"
+                android:background="@drawable/before_select_day_of_week"
                 android:padding="15dp"
                 android:text="@string/sunday"
                 android:textColor="@color/blue"
@@ -479,6 +492,7 @@
                 android:id="@+id/sunday_time_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputLayout
