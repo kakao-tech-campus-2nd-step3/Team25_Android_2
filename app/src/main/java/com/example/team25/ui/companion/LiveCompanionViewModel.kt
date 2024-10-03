@@ -1,11 +1,11 @@
 package com.example.team25.ui.companion
 
 import androidx.lifecycle.ViewModel
-import com.example.team25.ui.domain.model.AccompanyInfo
-import com.example.team25.ui.domain.model.Coordinates
-import com.example.team25.ui.domain.model.Gender
-import com.example.team25.ui.domain.model.Patient
-import com.example.team25.ui.domain.model.ReservationInfo
+import com.example.team25.domain.model.AccompanyInfo
+import com.example.team25.domain.model.Coordinates
+import com.example.team25.domain.model.Gender
+import com.example.team25.domain.model.Patient
+import com.example.team25.domain.model.ReservationInfo
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

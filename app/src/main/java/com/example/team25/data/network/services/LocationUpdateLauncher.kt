@@ -1,4 +1,4 @@
-package com.example.team25.ui.data.network.services
+package com.example.team25.data.network.services
 
 import android.annotation.SuppressLint
 import android.content.Context

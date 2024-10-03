@@ -1,4 +1,4 @@
-package com.example.team25.ui.data.network.services
+package com.example.team25.data.network.services
 
 import android.app.Notification
 import android.app.NotificationChannel
