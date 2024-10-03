@@ -1,4 +1,4 @@
-package com.example.team25.ui.status
+package com.example.team25.ui.status.utils
 
 import android.Manifest
 import android.content.Context
