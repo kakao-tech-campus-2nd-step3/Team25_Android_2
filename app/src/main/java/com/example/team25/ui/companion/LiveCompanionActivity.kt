@@ -82,4 +82,16 @@ class LiveCompanionActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
     }
+
+    @Override
+    override fun onResume() {
+        super.onResume()
+        binding.mapView.resume()
+    }
+
+    @Override
+    public override fun onPause() {
+        super.onPause()
+        binding.mapView.pause()
+    }
 }
