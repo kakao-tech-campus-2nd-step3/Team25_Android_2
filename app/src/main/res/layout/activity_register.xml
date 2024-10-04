@@ -74,8 +74,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -151,35 +151,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/introduction_text_view" />
-
-                <TextView
-                    android:id="@+id/certification_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/certification"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@id/introduction_edit_text"
-                    app:layout_constraintTop_toBottomOf="@id/introduction_edit_text" />
-
-                <TextView
-                    android:id="@+id/go_certification_btn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/blue_outlined_box"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/go_certification"
-                    android:textColor="@color/blue"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/certification_text_view" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
@@ -193,7 +164,7 @@
         android:layout_weight="1"
         android:background="@color/blue"
         android:gravity="center"
-        android:text="@string/apply_register"
+        android:text="@string/next"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent" />
