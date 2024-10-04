@@ -14,7 +14,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.team25.R
 import com.example.team25.databinding.ActivityLiveCompanionBinding
-import com.example.team25.ui.domain.model.Coordinates
+import com.example.team25.domain.model.Coordinates
 import com.example.team25.ui.status.CompanionCompleteDialog
 import com.kakao.vectormap.KakaoMap
 import com.kakao.vectormap.KakaoMapReadyCallback

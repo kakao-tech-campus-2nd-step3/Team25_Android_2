@@ -1,7 +1,7 @@
 package com.example.team25.ui.status
 
 import com.example.team25.databinding.ViewCompanionCompleteDialogBinding
-import com.example.team25.ui.domain.model.ReservationInfo
+import com.example.team25.domain.model.ReservationInfo
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color

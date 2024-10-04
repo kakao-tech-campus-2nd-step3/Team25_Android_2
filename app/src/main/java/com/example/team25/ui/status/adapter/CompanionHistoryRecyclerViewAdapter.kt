@@ -1,31 +1,32 @@
-package com.example.team25.ui.companion
+package com.example.team25.ui.status.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.team25.databinding.ItemLiveCompanionStatusBinding
+import com.example.team25.databinding.ItemCompanionHistoryBinding
 
-class LiveCompanionRecyclerViewAdapter :
-    ListAdapter<String, LiveCompanionRecyclerViewAdapter.LiveCompanionViewHolder>(DiffCallback()) {
-    class LiveCompanionViewHolder(val binding: ItemLiveCompanionStatusBinding) :
+class CompanionHistoryRecyclerViewAdapter:
+    ListAdapter<String, CompanionHistoryRecyclerViewAdapter.CompanionHistoryViewHolder>(DiffCallback()) {
+    class CompanionHistoryViewHolder(val binding: ItemCompanionHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: String) {
-            binding.liveCompanionStatusItem.text = item
+            binding.companionHistoryItem.text = item
         }
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
-    ): LiveCompanionViewHolder {
-        val binding = ItemLiveCompanionStatusBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return LiveCompanionViewHolder(binding)
+    ): CompanionHistoryViewHolder {
+        val binding =
+            ItemCompanionHistoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CompanionHistoryViewHolder(binding)
     }
 
     override fun onBindViewHolder(
-        holder: LiveCompanionViewHolder,
+        holder: CompanionHistoryViewHolder,
         position: Int,
     ) {
         val item = getItem(position)

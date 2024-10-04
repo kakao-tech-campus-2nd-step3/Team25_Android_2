@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.gradle.ktlint)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.ksp)
     id("kotlin-parcelize")
 }
 
@@ -57,7 +59,9 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.google.play.services.location)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.dagger.hilt.android)
     implementation(libs.kakao.sdk.all)
     implementation(libs.kakao.map)
     implementation(libs.androidx.core.ktx)
@@ -70,6 +74,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    ksp(libs.dagger.hilt.compiler)
 }
 
 fun getApiKey(key: String): String = gradleLocalProperties(rootDir, providers).getProperty(key, "")
