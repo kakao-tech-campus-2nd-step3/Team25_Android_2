@@ -271,8 +271,6 @@
         <item>22:30</item>
         <item>23:00</item>
         <item>23:30</item>
-        <item>24:00</item>
-        <item>24:30</item>
     </string-array>
 
     <string-array name="reservation_reject_option">

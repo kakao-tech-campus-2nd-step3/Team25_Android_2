@@ -9,7 +9,7 @@ import com.example.team25.databinding.ItemLiveCompanionStatusBinding
 
 class LiveCompanionRecyclerViewAdapter :
     ListAdapter<String, LiveCompanionRecyclerViewAdapter.LiveCompanionViewHolder>(DiffCallback()) {
-    inner class LiveCompanionViewHolder(val binding: ItemLiveCompanionStatusBinding) :
+    class LiveCompanionViewHolder(val binding: ItemLiveCompanionStatusBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: String) {
             binding.liveCompanionStatusItem.text = item
