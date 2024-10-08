@@ -1,6 +1,7 @@
 package com.example.team25.di
 
 import com.example.team25.BuildConfig
+import com.example.team25.data.network.services.ManagerService
 import com.example.team25.data.remote.SignIn
 import dagger.Module
 import dagger.Provides
@@ -28,5 +29,11 @@ object NetworkModule {
     @Singleton
     fun provideSignIn(@GeneralRetrofit retrofit: Retrofit): SignIn {
         return retrofit.create(SignIn::class.java)
+    }
+    
+    @Provides
+    @Singleton
+    fun provideManagerService(@GeneralRetrofit retrofit: Retrofit): ManagerService {
+        return retrofit.create(ManagerService::class.java)
     }
 }

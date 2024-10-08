@@ -80,6 +80,9 @@ dependencies {
     ksp(libs.dagger.hilt.compiler)
     implementation(libs.androidx.datastore)
     implementation(libs.protobuf.javalite)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.glide)
+    ksp(libs.compiler)
 
 }
 
