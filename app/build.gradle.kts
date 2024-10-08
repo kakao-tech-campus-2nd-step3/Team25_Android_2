@@ -24,6 +24,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "KAKAO_API_KEY", getApiKey("KAKAO_API_KEY"))
+        buildConfigField("String", "API_BASE_URL", getApiUrl("API_BASE_URL"))
+        manifestPlaceholders["kakaoApiKey"] = getApiKey("KAKAO_API_KEY")
     }
 
     buildTypes {
@@ -97,3 +99,5 @@ protobuf {
 }
 
 fun getApiKey(key: String): String = gradleLocalProperties(rootDir, providers).getProperty(key, "")
+fun getApiUrl(key: String): String = gradleLocalProperties(rootDir, providers).getProperty(key, "")
+

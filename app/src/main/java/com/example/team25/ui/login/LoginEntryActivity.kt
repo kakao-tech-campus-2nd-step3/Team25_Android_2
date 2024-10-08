@@ -3,11 +3,9 @@ package com.example.team25.ui.login
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.team25.data.Utils
 import com.example.team25.databinding.ActivityLoginEntryBinding
 import com.example.team25.ui.main.MainActivity
 import com.example.team25.ui.register.RegisterEntryActivity
@@ -17,15 +15,11 @@ import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginEntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginEntryBinding
     private val loginViewModel: LoginViewModel by viewModels()
-
-    @Inject
-    lateinit var utils: Utils
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +58,7 @@ class LoginEntryActivity : AppCompatActivity() {
                     }
 
                     is LoginState.Success -> {
-                        Log.i(TAG, "로그인 성공: ${state.token}")
+                        Log.i(TAG, "로그인 성공")
                     }
 
                     is LoginState.Error -> {
@@ -121,10 +115,6 @@ class LoginEntryActivity : AppCompatActivity() {
                 navigateToRegisterEntry()
             }
         }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     companion object {
