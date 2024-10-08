@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.team25.R
 import com.example.team25.databinding.ActivityEditWorkTimeBinding
-import com.example.team25.dto.DaySchedule
+import com.example.team25.data.network.dto.DayScheduleDto
 import com.example.team25.utils.DropdownUtils
 
 
@@ -18,7 +18,7 @@ class EditWorkTimeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityEditWorkTimeBinding
     private lateinit var dayButtonLayoutPairs: Map<View, View>
     private lateinit var autoCompleteTextViews : MutableList<AutoCompleteTextView>
-    private val daySchedules = mutableListOf<DaySchedule>()
+    private val daySchedules = mutableListOf<DayScheduleDto>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,13 +79,13 @@ class EditWorkTimeActivity : AppCompatActivity() {
     private fun initializeDaySchedules() {
         daySchedules.addAll(
             listOf(
-                DaySchedule("월"),
-                DaySchedule("화"),
-                DaySchedule("수"),
-                DaySchedule("목"),
-                DaySchedule("금"),
-                DaySchedule("토"),
-                DaySchedule("일")
+                DayScheduleDto("월"),
+                DayScheduleDto("화"),
+                DayScheduleDto("수"),
+                DayScheduleDto("목"),
+                DayScheduleDto("금"),
+                DayScheduleDto("토"),
+                DayScheduleDto("일")
             )
         )
     }
@@ -94,8 +94,8 @@ class EditWorkTimeActivity : AppCompatActivity() {
             val startTime = getStartTimeForDay(index)
             val endTime = getEndTimeForDay(index)
 
-            daySchedules[index].start_time = startTime
-            daySchedules[index].end_time = endTime
+            daySchedules[index].startTime = startTime
+            daySchedules[index].endTime = endTime
         }
     }
     private fun getStartTimeForDay(index: Int): String {
