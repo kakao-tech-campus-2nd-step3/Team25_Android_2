@@ -22,6 +22,9 @@ class RegisterViewModel @Inject constructor(
     private val _profileImage = MutableStateFlow("")
     val profileImage: StateFlow<String> = _profileImage
 
+    private val _profileImageUrl = MutableStateFlow("")
+    val profileImageUrl: StateFlow<String> = _profileImageUrl
+
     private val _gender = MutableStateFlow("남성")
     val gender: StateFlow<String> = _gender
 
@@ -33,6 +36,12 @@ class RegisterViewModel @Inject constructor(
 
     private val _certificateImage = MutableStateFlow("")
     val certificateImage: StateFlow<String> = _certificateImage
+
+    private val _certificateImageUrl = MutableStateFlow("")
+    val certificateImageUrl: StateFlow<String> = _certificateImageUrl
+
+    private val _isRegistered = MutableStateFlow(false)
+    val isRegistered: StateFlow<Boolean> = _isRegistered
 
     private val _registerState = MutableStateFlow<Result<String>?>(null)
     val registerState: StateFlow<Result<String>?> = _registerState
@@ -61,38 +70,41 @@ class RegisterViewModel @Inject constructor(
         _certificateImage.value = newImage
     }
 
-    fun registerManager(token: String) {
+    fun updateUploadedImageUrl(folderPath: String, url: String) {
+        when (folderPath) {
+            "images/profile" -> _profileImage.value = url
+            "images/certificate" -> _certificateImage.value = url
+        }
+    }
+
+    fun registerManager() {
         val managerRegisterDto = ManagerRegisterDto(
             name = _name.value,
-            profileImage = _profileImage.value,
+            profileImage = _profileImageUrl.value,
             gender = _gender.value,
             career = _career.value,
             comment = _comment.value,
-            certificateImage = _certificateImage.value
+            certificateImage = _certificateImageUrl.value
         )
 
         viewModelScope.launch {
-            val result = registerManagerUseCase(token, managerRegisterDto)
+            val result = registerManagerUseCase(managerRegisterDto)
             _registerState.value = result
+
+            _isRegistered.value = result.isSuccess
+            Log.d("RegisterViewModel", _isRegistered.value.toString())
         }
     }
 
     fun logManagerInfo() {
-        val managerRegisterDto = ManagerRegisterDto(
-            name = _name.value,
-            profileImage = _profileImage.value,
-            gender = _gender.value,
-            career = _career.value,
-            comment = _comment.value,
-            certificateImage = _certificateImage.value
-        )
-
-        // 로그 출력
         Log.d("RegisterViewModel", "Name: ${_name.value}")
         Log.d("RegisterViewModel", "Profile Image: ${_profileImage.value}")
         Log.d("RegisterViewModel", "Gender: ${_gender.value}")
         Log.d("RegisterViewModel", "Career: ${_career.value}")
         Log.d("RegisterViewModel", "Comment: ${_comment.value}")
         Log.d("RegisterViewModel", "Certificate Image: ${_certificateImage.value}")
+        Log.d("RegisterViewModel", "Profile Image Url: ${_profileImageUrl.value}")
+        Log.d("RegisterViewModel", "Certificate Image Url: ${_certificateImageUrl.value}")
+
     }
 }

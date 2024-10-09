@@ -9,9 +9,9 @@ class DefaultManagerRepository @Inject constructor(
     private val managerService: ManagerService
 ) : ManagerRepository {
 
-    override suspend fun registerManager(token: String, managerRegisterDto: ManagerRegisterDto): Result<String> {
+    override suspend fun registerManager(managerRegisterDto: ManagerRegisterDto): Result<String> {
         return try {
-            val response = managerService.registerManager("Bearer $token", managerRegisterDto)
+            val response = managerService.registerManager(managerRegisterDto)
             if (response.isSuccessful) {
                 val responseBody = response.body()
                 if (responseBody != null && responseBody.status) {

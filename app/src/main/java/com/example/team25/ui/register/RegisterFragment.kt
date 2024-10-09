@@ -79,6 +79,8 @@ class RegisterFragment : Fragment() {
 
             if (name.isBlank() || workHistory.isBlank() || introduction.isBlank()) {
                 Toast.makeText(requireContext(), "모든 필드를 입력해 주세요.", Toast.LENGTH_SHORT).show()
+            } else if (registerViewModel.profileImage.value.isBlank()) {
+                Toast.makeText(requireContext(), "프로필 이미지를 업로드해 주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 registerViewModel.updateName(name)
                 registerViewModel.updateGender(gender)
