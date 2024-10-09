@@ -24,6 +24,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "KAKAO_API_KEY", getApiKey("KAKAO_API_KEY"))
+        buildConfigField("String", "S3_ACCESS_KEY", getApiKey("S3_ACCESS_KEY"))
+        buildConfigField("String", "S3_SECRET_KEY", getApiKey("S3_SECRET_KEY"))
         buildConfigField("String", "API_BASE_URL", getApiUrl("API_BASE_URL"))
         manifestPlaceholders["kakaoApiKey"] = getApiKey("KAKAO_API_KEY")
     }
@@ -83,6 +85,9 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.glide)
     ksp(libs.compiler)
+    implementation(libs.aws.android.sdk.s3)
+    implementation(libs.aws.android.sdk.mobile.client)
+    implementation(libs.aws.android.sdk.core)
 
 }
 
