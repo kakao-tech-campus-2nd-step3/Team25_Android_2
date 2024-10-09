@@ -10,7 +10,6 @@ import retrofit2.http.POST
 interface ManagerService {
     @POST("/api/manager")
     suspend fun registerManager(
-        @Header("Authorization") token: String,
         @Body managerRegisterDto: ManagerRegisterDto
     ): Response<RegisterManagerResponse>
 }
