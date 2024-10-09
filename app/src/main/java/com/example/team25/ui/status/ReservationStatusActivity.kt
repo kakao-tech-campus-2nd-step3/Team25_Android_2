@@ -223,10 +223,10 @@ class ReservationStatusActivity : AppCompatActivity() {
             override fun onCompleteClicked(accompanyInfo: AccompanyInfo) {
                 val reservationInfo = accompanyInfo.reservationInfo
                 val companionCompleteDialog =
-                    CompanionCompleteDialog(this@ReservationStatusActivity, reservationInfo)
+                    CompanionCompleteDialog.newInstance(reservationInfo)
 
                 stopLocationService()
-                companionCompleteDialog.show()
+                companionCompleteDialog.show(supportFragmentManager, "CompanionCompleteDialog")
                 reservationStatusViewModel.updateAccompanyInfo(accompanyInfo, false)
                 reservationStatusViewModel.removeReservationStatus(accompanyInfo)
                 reservationStatusViewModel.addCompanionHistory(reservationInfo)
