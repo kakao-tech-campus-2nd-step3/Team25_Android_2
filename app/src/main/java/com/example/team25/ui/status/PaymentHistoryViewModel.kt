@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.example.team25.domain.model.PaymentInfo
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import java.time.LocalDateTime
 import java.util.Date
 
 class PaymentHistoryViewModel : ViewModel() {
@@ -17,7 +18,7 @@ class PaymentHistoryViewModel : ViewModel() {
         updatePaymentInfo(
             PaymentInfo(
                 paymentId = 100, reservationId = 9600, paymentMethod = "토스", paymentAmount = 50000,
-                paymentDate = Date(), cashReceipt = true
+                paymentDate = LocalDateTime.now(), cashReceipt = true
             )
         )
         updateCompanionHistory(
