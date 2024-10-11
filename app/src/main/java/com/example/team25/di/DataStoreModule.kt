@@ -2,9 +2,12 @@ package com.example.team25.di
 
 import android.content.Context
 import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
+import com.example.team25.TokensProto.Tokens
+import com.example.team25.data.database.TokenSerializer
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,5 +26,19 @@ object DataStoreModule {
         return PreferenceDataStoreFactory.create(
             produceFile = {context.preferencesDataStoreFile(DATA_STORE_FILE_NAME)}
         )
+    }
+
+    private val Context.tokenDataStore: DataStore<Tokens> by dataStore(
+        fileName = "tokens.pb",
+        serializer = TokenSerializer
+    )
+
+    @Provides
+    @Singleton
+    @TokenDataStore
+    fun provideTokenDataStore(
+        @ApplicationContext context: Context
+    ): DataStore<Tokens> {
+        return context.tokenDataStore
     }
 }
