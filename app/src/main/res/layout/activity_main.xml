@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/manager_name_text_view"
+                android:id="@+id/manager_name_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -53,8 +53,8 @@
                 android:text="@string/manager_sir"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/manager_name_text_view"
-                app:layout_constraintStart_toEndOf="@id/manager_name_text_view" />
+                app:layout_constraintBottom_toBottomOf="@id/manager_name_edit_text"
+                app:layout_constraintStart_toEndOf="@id/manager_name_edit_text" />
 
             <ImageView
                 android:id="@+id/profile_image_view"

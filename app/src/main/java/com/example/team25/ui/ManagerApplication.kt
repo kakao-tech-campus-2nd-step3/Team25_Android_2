@@ -1,6 +1,8 @@
 package com.example.team25.ui
 
 import android.app.Application
+import com.amazonaws.mobile.client.AWSMobileClient
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferNetworkLossHandler
 import com.example.team25.BuildConfig
 import com.kakao.sdk.common.KakaoSdk
 import com.kakao.vectormap.KakaoMapSdk
@@ -12,6 +14,11 @@ class ManagerApplication: Application() {
         super.onCreate()
         initializeKakaoMapSdk()
         initializeKakaoSdk()
+        initializeTransferNetworkLossHandler()
+    }
+
+    private fun initializeTransferNetworkLossHandler() {
+        TransferNetworkLossHandler.getInstance(this)
     }
 
     private fun initializeKakaoMapSdk() {

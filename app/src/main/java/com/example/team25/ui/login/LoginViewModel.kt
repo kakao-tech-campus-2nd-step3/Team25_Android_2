@@ -24,10 +24,9 @@ class LoginViewModel @Inject constructor(
         viewModelScope.launch {
             _loginState.value = LoginState.Loading
 
-            val accountLoginDto = AccountLoginDto(oauthAccessToken)
-            val tokenDto: TokenDto? = loginUseCase(accountLoginDto)
+            val tokenDto: TokenDto? = loginUseCase(oauthAccessToken)
             if (tokenDto != null) {
-                _loginState.value = LoginState.Success(tokenDto)
+                _loginState.value = LoginState.Success
             } else {
                 _loginState.value = LoginState.Error("로그인 실패")
             }
