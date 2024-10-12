@@ -1,33 +1,27 @@
 package com.example.team25.ui.register
 
-import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.team25.R
 import com.example.team25.databinding.ActivityRegisterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
+    private val registerViewModel: RegisterViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navigateToCertificate()
-        navigateToRegisterStatus()
-    }
-
-    private fun navigateToCertificate() {
-        binding.goCertificationBtn.setOnClickListener {
-            val intent = Intent(this, CertificateActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun navigateToRegisterStatus() {
-        binding.goRegisterBtn.setOnClickListener {
-            val intent = Intent(this, RegisterStatusActivity::class.java)
-            startActivity(intent)
+        if (savedInstanceState == null) {
+            val registerFragment = RegisterFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.register_fragment_container, registerFragment)
+                .commit()
         }
     }
 }

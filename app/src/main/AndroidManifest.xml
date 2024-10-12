@@ -3,8 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:required="false" />
+
 
     <application
+        android:name=".ui.ManagerApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +27,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Team25_2"
         tools:targetApi="31">
+        <service
+            android:name=".data.network.services.LocationUpdateService"
+            android:foregroundServiceType="location"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.PaymentHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationRejectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.status.ReservationStatusActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.companion.LiveCompanionActivity"
             android:exported="false" />
@@ -30,9 +59,6 @@
             android:name=".ui.register.RegisterStatusActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.register.CertificateActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
@@ -45,11 +71,20 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao${kakaoApiKey}" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />
+        <service android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService" android:enabled="true"/>
     </application>
 
 </manifest>

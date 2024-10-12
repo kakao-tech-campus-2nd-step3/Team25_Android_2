@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.register.CertificateActivity">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/back_btn"
@@ -39,38 +38,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/certificate_text_view" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
         android:id="@+id/certificate_upload_btn"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/gray_background_box"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/certificate_notice_text_view">
+        app:layout_constraintTop_toBottomOf="@id/certificate_notice_text_view" />
 
-        <ImageView
-            android:id="@+id/add_image_image_view"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/add_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/add_image_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/add_image"
+        app:layout_constraintEnd_toEndOf="@id/certificate_upload_btn"
+        app:layout_constraintStart_toStartOf="@id/certificate_upload_btn"
+        app:layout_constraintTop_toTopOf="@id/certificate_upload_btn" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/upload_certificate"
-            android:textColor="@color/gray_04"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/add_image_image_view" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/add_image_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_certificate"
+        android:textColor="@color/gray_04"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/certificate_upload_btn"
+        app:layout_constraintEnd_toEndOf="@id/certificate_upload_btn"
+        app:layout_constraintStart_toStartOf="@id/certificate_upload_btn"
+        app:layout_constraintTop_toBottomOf="@id/add_image_image_view" />
 
     <TextView
         android:id="@+id/precaution_text_view"
@@ -184,12 +183,12 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
-        android:id="@+id/go_certificate_btn"
+        android:id="@+id/register_finish_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/blue"
         android:gravity="center"
-        android:text="@string/certificate"
+        android:text="@string/register_finish"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent" />

@@ -271,8 +271,6 @@
         <item>22:30</item>
         <item>23:00</item>
         <item>23:30</item>
-        <item>24:00</item>
-        <item>24:30</item>
     </string-array>
 
     <string-array name="reservation_reject_option">
@@ -313,5 +311,9 @@
     <string name="input_companion_status">동행 상태를 입력해주세요</string>
     <string name="input">입력</string>
     <string name="output">출력</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_finish">등록 신청하기</string>
+    <string name="hong_gil_dong">홍길동</string>
 
 </resources>
