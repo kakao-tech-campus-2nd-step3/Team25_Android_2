@@ -83,7 +83,7 @@ class ReservationStatusActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkLocationSettingsAndStartService() {
+    private fun checkLocationSettingsAndStartService(accompanyInfo: AccompanyInfo) {
         val locationRequest = LocationRequest.Builder(
             Priority.PRIORITY_HIGH_ACCURACY,
             5000L
@@ -98,6 +98,7 @@ class ReservationStatusActivity : AppCompatActivity() {
 
         task.addOnSuccessListener {
             startLocationService()
+            reservationStatusViewModel.updateAccompanyInfo(accompanyInfo, true)
         }.addOnFailureListener { exception ->
             if (exception is ResolvableApiException) {
                 try {
@@ -210,8 +211,7 @@ class ReservationStatusActivity : AppCompatActivity() {
 
                 if (isPermissionSetGranted(this@ReservationStatusActivity)) {
                     if(!isServiceRunning){
-                        checkLocationSettingsAndStartService()
-                        reservationStatusViewModel.updateAccompanyInfo(accompanyInfo, true)
+                        checkLocationSettingsAndStartService(accompanyInfo)
                     }else{
                         Toast.makeText(this@ReservationStatusActivity, "이미 진행중인 동행 서비스가 있습니다.\n동행 완료 버튼을 눌러 종료해 주세요", Toast.LENGTH_SHORT).show()
                     }
@@ -223,10 +223,10 @@ class ReservationStatusActivity : AppCompatActivity() {
             override fun onCompleteClicked(accompanyInfo: AccompanyInfo) {
                 val reservationInfo = accompanyInfo.reservationInfo
                 val companionCompleteDialog =
-                    CompanionCompleteDialog(this@ReservationStatusActivity, reservationInfo)
+                    CompanionCompleteDialog.newInstance(reservationInfo)
 
                 stopLocationService()
-                companionCompleteDialog.show()
+                companionCompleteDialog.show(supportFragmentManager, "CompanionCompleteDialog")
                 reservationStatusViewModel.updateAccompanyInfo(accompanyInfo, false)
                 reservationStatusViewModel.removeReservationStatus(accompanyInfo)
                 reservationStatusViewModel.addCompanionHistory(reservationInfo)

@@ -1,32 +1,60 @@
 package com.example.team25.ui.status
 
+import android.app.Dialog
 import com.example.team25.databinding.ViewCompanionCompleteDialogBinding
 import com.example.team25.domain.model.ReservationInfo
-import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 
 
-class CompanionCompleteDialog(context: Context, reservationInfo: ReservationInfo) :
-    Dialog(context) {
-    private lateinit var binding: ViewCompanionCompleteDialogBinding
+class CompanionCompleteDialog :
+    DialogFragment() {
+    private var _binding: ViewCompanionCompleteDialogBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ViewCompanionCompleteDialogBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    companion object {
+        private const val RESERVATION_INFO = "reservation_info"
 
-        setBackgroundDrawable()
-        setCanceledOnTouchOutside(true)
-        setCancelable(true)
+        fun newInstance(reservationInfo: ReservationInfo): CompanionCompleteDialog {
+            val fragment = CompanionCompleteDialog()
+            val args = Bundle().apply {
+                putParcelable(RESERVATION_INFO, reservationInfo)
+            }
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
+    override fun onCreateView(
+        inflater: android.view.LayoutInflater,
+        container: android.view.ViewGroup?,
+        savedInstanceState: Bundle?
+    ): android.view.View? {
+        _binding = ViewCompanionCompleteDialogBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         setDialogBtnListener()
     }
 
-    private fun setBackgroundDrawable() {
-        window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setCanceledOnTouchOutside(true)
+        isCancelable = true
+        return dialog
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setDialogBtnListener() {
@@ -35,7 +63,7 @@ class CompanionCompleteDialog(context: Context, reservationInfo: ReservationInfo
         }
 
         binding.navigateToReportWriteBtn.setOnClickListener {
-            Toast.makeText(context, "리포트 작성 화면으로 이동", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "리포트 작성 화면으로 이동", Toast.LENGTH_SHORT).show()
         }
     }
 }

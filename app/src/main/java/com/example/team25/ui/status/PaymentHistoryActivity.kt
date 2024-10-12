@@ -13,7 +13,6 @@ import com.example.team25.ui.status.adapter.CompanionHistoryRecyclerViewAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
-import java.util.Date
 import java.util.Locale
 
 class PaymentHistoryActivity : AppCompatActivity() {

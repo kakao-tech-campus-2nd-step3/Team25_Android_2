@@ -176,10 +176,10 @@ class LiveCompanionActivity : AppCompatActivity() {
     private fun setCompanionCompleteBtnClickListener() {
         binding.completeCompanionBtn.setOnClickListener {
             val reservationInfo = liveCompanionViewModel.accompanyInfo.value.reservationInfo
-            val companionCompleteDialog = CompanionCompleteDialog(this, reservationInfo)
+            val companionCompleteDialog = CompanionCompleteDialog.newInstance(reservationInfo)
 
             stopLocationService()
-            companionCompleteDialog.show()
+            companionCompleteDialog.show(supportFragmentManager,"CompanionCompleteDialog")
         }
     }
 
