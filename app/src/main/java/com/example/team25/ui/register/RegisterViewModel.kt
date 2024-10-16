@@ -4,10 +4,15 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.team25.data.network.dto.ManagerRegisterDto
+import com.example.team25.domain.model.Gender
+import com.example.team25.domain.model.toKorean
 import com.example.team25.domain.usecase.RegisterManagerUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -25,8 +30,8 @@ class RegisterViewModel @Inject constructor(
     private val _profileImageUrl = MutableStateFlow("")
     val profileImageUrl: StateFlow<String> = _profileImageUrl
 
-    private val _gender = MutableStateFlow("남성")
-    val gender: StateFlow<String> = _gender
+    private val _gender = MutableStateFlow(Gender.MALE)
+    val gender: StateFlow<Gender> = _gender
 
     private val _career = MutableStateFlow("")
     val career: StateFlow<String> = _career
@@ -46,6 +51,11 @@ class RegisterViewModel @Inject constructor(
     private val _registerState = MutableStateFlow<Result<String>?>(null)
     val registerState: StateFlow<Result<String>?> = _registerState
 
+    val manChecked: StateFlow<Boolean> =
+        gender.map { it == Gender.MALE }.stateIn(viewModelScope, SharingStarted.Lazily, true)
+    val womanChecked: StateFlow<Boolean> =
+        gender.map { it == Gender.FEMALE }.stateIn(viewModelScope, SharingStarted.Lazily, false)
+
     fun updateName(newName: String) {
         _name.value = newName
     }
@@ -54,7 +64,7 @@ class RegisterViewModel @Inject constructor(
         _profileImage.value = newImage
     }
 
-    fun updateGender(newGender: String) {
+    fun updateGender(newGender: Gender) {
         _gender.value = newGender
     }
 
@@ -81,7 +91,7 @@ class RegisterViewModel @Inject constructor(
         val managerRegisterDto = ManagerRegisterDto(
             name = _name.value,
             profileImage = _profileImageUrl.value,
-            gender = _gender.value,
+            gender = _gender.value.toKorean(),
             career = _career.value,
             comment = _comment.value,
             certificateImage = _certificateImageUrl.value

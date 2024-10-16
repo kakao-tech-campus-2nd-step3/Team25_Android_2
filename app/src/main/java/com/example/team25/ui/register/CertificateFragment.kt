@@ -61,11 +61,14 @@ class CertificateFragment : Fragment() {
     }
 
     private fun loadInfo() {
-        val certificateImageUrl = registerViewModel.certificateImage.value
-        if (certificateImageUrl.isNotEmpty()) {
-            Glide.with(this)
-                .load(certificateImageUrl)
-                .into(binding.certificateUploadBtn)
+        viewLifecycleOwner.lifecycleScope.launch {
+            registerViewModel.certificateImage.collect { certificateImageUrl ->
+                if (certificateImageUrl.isNotEmpty()) {
+                    Glide.with(this@CertificateFragment)
+                        .load(certificateImageUrl)
+                        .into(binding.certificateUploadBtn)
+                }
+            }
         }
     }
 
