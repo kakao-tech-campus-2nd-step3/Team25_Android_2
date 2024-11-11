@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.EditImageFragment">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/change_image_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_profile_image"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"/>
+
+    <ImageView
+        android:id="@+id/profile_upload_btn"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/gray_background_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_image_text_view"/>
+
+    <ImageView
+        android:id="@+id/add_image_image_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/add_image"
+        app:layout_constraintEnd_toEndOf="@id/profile_upload_btn"
+        app:layout_constraintStart_toStartOf="@id/profile_upload_btn"
+        app:layout_constraintTop_toTopOf="@id/profile_upload_btn" />
+
+    <TextView
+        android:id="@+id/add_image_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_profile"
+        android:textColor="@color/gray_04"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_upload_btn"
+        app:layout_constraintEnd_toEndOf="@id/profile_upload_btn"
+        app:layout_constraintStart_toStartOf="@id/profile_upload_btn"
+        app:layout_constraintTop_toBottomOf="@id/add_image_image_view" />
+
+    <TextView
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/do_change"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

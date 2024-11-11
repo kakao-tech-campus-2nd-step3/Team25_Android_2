@@ -11,11 +11,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.team25"
+    namespace = "com.kakaotech.team25M"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.team25"
+        applicationId = "com.kakaotech.team25M"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -27,11 +27,22 @@ android {
         buildConfigField("String", "S3_ACCESS_KEY", getApiKey("S3_ACCESS_KEY"))
         buildConfigField("String", "S3_SECRET_KEY", getApiKey("S3_SECRET_KEY"))
         buildConfigField("String", "API_BASE_URL", getApiUrl("API_BASE_URL"))
-        manifestPlaceholders["kakaoApiKey"] = getApiKey("KAKAO_API_KEY")
+        manifestPlaceholders["kakaoApiKey"] = getApiKey("KAKAO_API_KEY_NO_QUOTES")
     }
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
+        }
+
+        debug {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -45,15 +56,6 @@ android {
         buildConfig = true
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-            )
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

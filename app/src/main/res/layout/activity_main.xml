@@ -47,7 +47,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/manager_name_edit_text"
+                android:id="@+id/manager_name_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -65,13 +65,14 @@
                 android:text="@string/manager_sir"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/manager_name_edit_text"
-                app:layout_constraintStart_toEndOf="@id/manager_name_edit_text" />
+                app:layout_constraintBottom_toBottomOf="@id/manager_name_text_view"
+                app:layout_constraintStart_toEndOf="@id/manager_name_text_view" />
 
             <ImageView
                 android:id="@+id/profile_image_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:src="@drawable/profile_base"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -199,5 +200,17 @@
             android:textSize="12sp" />
 
     </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/withdraw_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/withdraw_membership"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/logout_text_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

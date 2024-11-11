@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">매니저앱</string>
+    <string name="app_name">메디투게더 매니저앱</string>
     <string name="main_welcome">환영합니다 산지니님</string>
     <string name="hospital_companion">병원동행</string>
     <string name="need_hospital_companion">믿을 수 있는 병원 동행이 필요할 때</string>
@@ -9,7 +9,7 @@
     <string name="service_available_after_log_in">로그인 후 이용 가능한 서비스입니다.</string>
     <string name="reservation_status">예약 현황</string>
     <string name="service_description">전문 매니저와 함께해서\n믿을 수 있는 병원 동행 서비스</string>
-    <string name="application_name">앱이름</string>
+    <string name="application_name">메디투게더</string>
     <string name="input_information">환자분의 정보를 입력해주세요</string>
     <string name="name">이름</string>
     <string name="input_name_hint">이름 입력</string>
@@ -97,6 +97,27 @@
         <item>064</item>
     </string-array>
 
+    <string-array name="sido_option">
+        <item>서울</item>
+        <item>부산광역시</item>
+        <item>부산</item>
+        <item>인천</item>
+        <item>대구</item>
+        <item>대전</item>
+        <item>광주</item>
+        <item>울산</item>
+        <item>세종특별자치시</item>
+        <item>경기</item>
+        <item>충남</item>
+        <item>충북</item>
+        <item>전남</item>
+        <item>경북</item>
+        <item>경남</item>
+        <item>강원특별자치도</item>
+        <item>전북특별자치도</item>
+        <item>제주특별자치도</item>
+    </string-array>
+
     <string name="reservation_history">예약 내역</string>
     <string name="reservation_cancel">예약 취소</string>
     <string name="call_manager">매니저에게 연락하기</string>
@@ -153,7 +174,7 @@
     <string name="select_active_time">활동 시간 선택 </string>
     <string name="_08_00">08:00</string>
     <string name="_20_00">20:00</string>
-    <string name="set_work_time_location">근무 지역/시간대 설정하기</string>
+    <string name="set_work_time">근무 시간대 설정하기</string>
     <string-array name="administrative_district_option">
         <item>서울특별시</item>
         <item>부산광역시</item>
@@ -316,5 +337,14 @@
     <string name="register_finish">등록 신청하기</string>
     <string name="hong_gil_dong">홍길동</string>
     <string name="logout">로그아웃</string>
+    <string name="loading">로딩 중입니다.</string>
+    <string name="withdraw_membership">회원 탈퇴</string>
+    <string name="please_register_location">지역을 등록해주세요</string>
+    <string name="edit_complete">수정완료</string>
+    <string name="please_write_comment">한마디 자기소개를 적어주세요</string>
+    <string name="tilde">~</string>
+    <string name="change_profile_image">프로필 이미지 변경</string>
+    <string name="do_change">변경하기</string>
+    <string name="input_sigungu">시/군/구를 입력하세요</string>
 
 </resources>

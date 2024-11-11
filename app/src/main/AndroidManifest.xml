@@ -5,16 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission
         android:name="android.permission.POST_NOTIFICATIONS"
         android:required="false" />
-
 
     <application
         android:name=".ui.ManagerApplication"
@@ -27,10 +25,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Team25_2"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+
         <service
             android:name=".data.network.services.LocationUpdateService"
-            android:foregroundServiceType="location"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
         <activity
             android:name=".ui.status.PaymentHistoryActivity"
             android:exported="false" />
@@ -45,15 +48,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.companion.LiveCompanionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.EditWorkTimeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.EditWorkLocationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".ui.register.RegisterStatusActivity"
@@ -71,11 +65,18 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
                 <data
                     android:host="oauth"
                     android:scheme="kakao${kakaoApiKey}" />
@@ -84,7 +85,10 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />
-        <service android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService" android:enabled="true"/>
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
     </application>
 
 </manifest>

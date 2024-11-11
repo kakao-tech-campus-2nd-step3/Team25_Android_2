@@ -1,0 +1,16 @@
+package com.kakaotech.team25M.data.network.services
+
+import com.kakaotech.team25M.data.network.dto.AccountLoginDto
+import com.kakaotech.team25M.data.network.dto.RefreshTokenDto
+import com.kakaotech.team25M.data.network.dto.TokenDto
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.POST
+
+interface SignIn {
+    @POST("/auth/kakao/login")
+    suspend fun getSignIn(@Body accountLoginDto: AccountLoginDto): Response<TokenDto>
+
+    @POST("/auth/refresh")
+    suspend fun refreshToken(@Body refreshTokenDto: RefreshTokenDto): Response<TokenDto>
+}
