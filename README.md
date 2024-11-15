@@ -160,9 +160,14 @@
 
 📝 [API 문서](https://quickest-asterisk-75d.notion.site/API-5f451248315e4bca9f6de224fa1215a1)
 
-![API 명세서](https://github.com/user-attachments/assets/8a8f2ae2-5d71-4f5d-83e3-8babdabe84a2)
+![API-문서](https://github.com/user-attachments/assets/c63fa8c9-b17c-4eaf-813f-a08b35d8dfd2)
 
 <br>
 
 ## 기술 스택
 ![image](https://github.com/user-attachments/assets/9e96dfa1-fd50-4f0e-b86e-1803e080ae61)
+
+<br>
+
+## 구현 화면
+<img width="691" alt="매니저앱2x" src="https://github.com/user-attachments/assets/02a4a5fc-39e6-48d1-8717-e4ab3b190861">
